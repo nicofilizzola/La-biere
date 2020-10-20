@@ -1,0 +1,64 @@
+header{
+    @include flexCenter();
+    @include fixedTop();
+    z-index: 99;
+    width: 100vw;
+    justify-content: flex-end;
+    background-image: linear-gradient($color-dark, $transparent);
+    navbar{
+        padding-right: $scrollbar-width;
+        @media screen and (max-width: map-get($breakpoints, medium)) {
+            padding-right: 2rem;
+            padding-top: 2rem;
+        }
+    }
+    button:hover:not(.active){
+        letter-spacing: $active-letter-spacing;
+        filter: drop-shadow(0 0 1rem $color-tertiary);
+    }
+    #burgerMenu{
+        display: none;
+        background-image: url(../../public/img/burger.png);
+        @include iconSetup();
+    }
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        button:not(#burgerMenu){
+            display: none;
+        }
+        #burgerMenu{
+            display: inherit;
+        }
+    }
+}
+
+.responsive-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: $color-primary-darken;
+    button:not(#closeNav){
+        width: 100vw;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .active{
+        background-color: $color-secondary;
+        filter: drop-shadow(0 0 0 0);
+    }
+    
+}
+
+.menu--hidden{
+    left: 100vw;
+}
+.menu--appear{
+    left: 0;
+}
+
+@media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        .responsive-nav{
+            display: flex;
+        }
+}

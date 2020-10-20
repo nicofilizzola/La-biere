@@ -1,0 +1,41 @@
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fixedTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@mixin pngShadow{
+    filter: drop-shadow(10px 10px 10px rgba($color: $color-dark, $alpha: $shadow-coeff));
+}
+
+@mixin basicTransition{
+    transition: 0.5s ease-in-out;
+}
+
+@mixin getBackground($map){
+    @each $key, $value in $map{
+        .#{$key}{
+            background-image: map-get($map, $key);
+            background-position: center;
+        }
+    }
+}
+
+@mixin iconSetup(){
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin closeSetup(){
+    position: absolute;
+    top: 2rem;
+    right: 2rem; 
+    background-image: url(../../public/img/close.png);
+}

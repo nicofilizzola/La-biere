@@ -1,0 +1,37 @@
+.hover-grow{
+    @include basicTransition();
+    &:hover{
+        width: 450px;
+        @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+           width: 225px; 
+        }
+        @media screen and (max-width: map-get($map: $breakpoints, $key: small)) {
+           width: 125px; 
+        }
+        overflow: hidden;
+    }
+}
+
+.scroll-arrow{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    bottom: 100px;
+    padding: 1rem;
+    animation: shakeY 1.5s infinite ease-in-out;
+    &--corner{
+        width: 25px;
+        bottom: 5rem;
+        right: 4rem;
+        padding: 2rem;
+    }
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+        width: 50px; 
+        bottom: 5rem;
+        &--corner{
+            width: 20px;
+            bottom: 10rem;
+            right: 2.5rem;
+        }
+     }
+}

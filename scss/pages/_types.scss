@@ -1,0 +1,85 @@
+.popup{
+    width: 90vw;
+    max-height: 75vh;
+    @include pngShadow();
+    &__body{
+        width: 100%;
+        padding: 1rem;
+        background-color: $color-secondary;
+        overflow-y: scroll;
+        max-height: 90vh;
+        p, h3{
+            color: $color-dark;
+            margin: 0 1rem;
+        }
+    }
+    &__heading{
+        width: 100%;
+        min-height: 100px;
+        padding: 1rem;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flexCenter();
+        .close-button{
+            top: 0.5rem;
+            right: 0.5rem;
+            background-size: 1rem;
+        }
+    }
+    &__container{
+        position: fixed;
+        top: 100vh;
+        z-index: 98;
+        &--appear{
+            top: 0;
+        }
+    }
+    @media screen and (max-width: map-get($breakpoints, medium)){
+        h2{
+            font-size: 2rem;
+        }
+   
+    }
+}
+
+/* SWIPER PAGINATION COLOR */
+html:root{
+--swiper-theme-color: #FEC804; /* COLOR PRIMARY */
+}
+
+.swiper{
+    &-container{
+        width: $slider-dimensions;
+        height: $slider-dimensions;
+    }
+
+    &-slide{
+        width: $slider-dimensions;
+        height: $slider-dimensions;
+
+        img{
+            width: $slider-dimensions - (75px*2);
+            height: auto;
+            margin: 75px;
+        }
+    }
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        &-container{
+            width: $slider-dimensions-resp;
+            height: $slider-dimensions-resp;
+        }
+
+        &-slide{
+            width: $slider-dimensions-resp;
+            height: $slider-dimensions-resp;
+            
+
+            img{
+                width: $slider-dimensions-resp - (50px*2);
+                margin: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+body .hidden{
+    display: none;
+    &--small{
+        @media screen and (max-width: map-get($map: $breakpoints, $key: small)) {
+            display: none;
+        }
+    }
+    &--medium{
+        @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+            display: none;
+        }
+    }
+    &--large{
+        @media screen and (max-width: map-get($map: $breakpoints, $key: large)) {
+            display: none;
+        }
+    }
+    &--extra-large{
+        @media screen and (max-width: map-get($map: $breakpoints, $key: extra-large)) {
+            display: none;
+        }
+    }
+}
+
+body .appear{
+    &--small{
+        display: none;
+        @media screen and (max-width: map-get($map: $breakpoints, $key: small)) {
+            display: inherit;
+        }
+    }
+    &--medium{
+        display: none;
+        @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+            display: inherit;
+        }
+    }
+    &--large{
+        display: none;
+        @media screen and (max-width: map-get($map: $breakpoints, $key: large)) {
+            display: inherit;
+        }
+    }
+    &--extra-large{
+        display: none;
+        @media screen and (max-width: map-get($map: $breakpoints, $key: extra-large)) {
+            display: inherit;
+        }
+    }
+}
+
+.active{
+    font-family: 'FuturaMid';
+    color: $color-primary;
+    letter-spacing: $active-letter-spacing;
+}
+
+.active:not(.responsive-nav button){
+    filter: drop-shadow(0 0 1rem $color-tertiary);
+}
+
+.blur{
+    filter: blur(0.5rem);
+}
+

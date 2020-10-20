@@ -1,0 +1,13 @@
+.notice{
+    position: fixed;
+    width: 200px;
+    height: auto;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 98;
+    @include pngShadow();
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+        width: 150px;
+    }
+}

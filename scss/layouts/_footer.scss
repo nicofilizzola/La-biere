@@ -1,0 +1,52 @@
+.footer{
+    width: 100vw;;
+    background-color: $color-footer;
+
+    @include flexCenter();
+    &__container{
+        width: 80vw;
+        display: grid;  
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 2rem;  
+        margin-bottom: 2rem;  
+        div{
+            & *{
+                text-align: center;
+            }
+            justify-content: flex-start;
+            b{
+                text-transform: uppercase;
+            }
+            a, p{
+                color: darken($color-secondary, 10);
+                padding: 0.5rem;
+            }  
+        }
+        img{
+            /*grid-column: 2/4;*/
+            max-width: 200px;
+            height: auto;
+        }
+    }
+    .grid-duo{
+        @media screen and (min-width: map-get($map: $breakpoints, $key: medium)){
+            grid-column-start: 2;
+            grid-column-end: 3;
+            &--var{
+                grid-column-start: 3;
+                grid-column-end: 4;
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: 'medium')){
+        height: 100vh;
+        &__container{  
+            grid-template-columns: repeat(2, 1fr);
+            div{
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@include getBackground($backgrounds);
+
+.bg-black{
+    background-color: $color-dark;
+    box-shadow: 0 1rem 2rem rgba($color: $color-dark, $alpha: $shadow-coeff);
+}
+
+.bg-yellow{
+    background-color: $color-primary;
+    h1{
+        color: $color-dark
+    }
+}

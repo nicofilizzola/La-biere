@@ -1,0 +1,103 @@
+section{
+    @include flexCenter();
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        flex-direction: column;
+        scroll-snap-align: none;
+    }
+}
+
+.flex{
+    @include flexCenter();
+    &--col{
+        flex-direction: column;
+        &--left{
+            align-items: flex-start;
+
+            @media screen and (max-width:map-get($map: $breakpoints, $key: medium)) {
+                align-items: center;
+            }
+        }
+        &--right{
+            align-items: flex-end;
+            & *{
+                text-align: right;
+            }
+        }
+    }
+}
+
+figure{
+    img{
+        width: 400px;
+        height: auto;
+        padding: 3rem;
+        @include pngShadow();
+        @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+            max-width: 200px;
+        }
+        @media screen and (max-width: map-get($map: $breakpoints, $key: small)){
+            max-width: 150px;
+        }
+    }
+} 
+
+.text-aside{
+    max-width: 600px;
+}
+
+.grid{
+    display: grid;
+    grid-gap: 1.5rem;
+    padding: 2rem;
+    &__double{
+        grid-template-columns: repeat(2, 1fr);
+        .grid__btn{
+            @include flexCenter();
+            cursor: pointer;
+            padding: 2rem; 
+            /* BLACK LAYER PHOTOS */ 
+            &:hover{
+                transform: scale(1.1);
+                filter: brightness(200%);
+                position: relative;
+                z-index: 98;
+                h3{
+                    color: $transparent;
+                }
+            }
+        }   
+    }
+    &__triple{
+        grid-template-columns: repeat(3, 1fr);
+        & *{
+            padding: 0.5rem;
+        }
+        .members-section__img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+    }
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        grid-gap: 0.5rem;
+        &__double{
+            grid-template-columns: (1fr);
+            padding: 0.5rem;
+            .grid__btn{
+                padding: 0.5rem;
+                height: 80px;
+            }
+        }
+        &__triple{
+            grid-template-columns: (1fr);
+            padding: 0.5rem;
+        }
+    }
+}

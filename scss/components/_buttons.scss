@@ -1,0 +1,14 @@
+button{
+    border: none;
+    background: none;
+    padding: 2rem;
+    text-transform: uppercase;
+    color: $color-secondary;
+    cursor: pointer;
+    @include basicTransition();
+}
+
+.close-button{
+    @include closeSetup();
+    @include iconSetup();
+}

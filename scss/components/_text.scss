@@ -1,0 +1,93 @@
+h1, h2, h3{
+    text-transform: uppercase;
+    letter-spacing: 0.45rem;
+    text-align: center;
+}
+
+p, li{
+    font-size: 1rem;
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        margin-right: 1.5rem; 
+        margin-left: 2.5rem; //Bullet space + normal margin
+    }
+}
+
+h1, h2, h3, p{
+    padding: 1rem;
+}
+
+h1, h2, h3, p:not(.popup p){
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        text-align: center;
+    }
+}
+
+h2, h3, p, li, dt, dd{
+    color: $color-secondary;
+}
+
+dt, dd, ol li{
+    margin-left: 3rem;
+    a{
+        color: $color-primary;
+    }
+}
+
+dt{
+    margin: 1rem;
+}
+
+h1{
+    font-family: "FuturaHeavy";
+    font-size: 4.5rem;
+    color: $color-primary;
+}
+
+h2{
+    font-family: "FuturaMid";
+    font-size: 3rem;
+}
+
+h3{
+    font-family: "FuturaLight";
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+h1, h2{
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        margin-top: 2rem;
+    }
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.heading-resp{
+    display: none;
+    @media screen and (max-width:map-get($breakpoints, medium)){
+        display: inherit;
+    }
+    &--full{
+        @media screen and (max-width:map-get($breakpoints, medium)){
+            display: none;
+        } 
+    }
+}
+
+.text-important{
+    color: $color-primary;
+    font-family: 'FuturaMid';
+    font-style: italic;
+    text-align: left;
+}
+
+.error_message{
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,7 @@
+@mixin getBackground($map){
+    @each $key, $value in $map{
+        .#{$key}{
+            background-image: $value;
+        }
+    }
+}

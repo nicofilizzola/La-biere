@@ -1,0 +1,79 @@
+/**********
+COLORS
+**********/
+
+$color-primary: #FEC804;
+$color-secondary: #fff;
+$color-tertiary: #FFE481;
+$color-primary-darken: darken($color-primary, 10);
+$color-footer: #555;
+$color-dark: #000;
+$transparent: rgba(0, 0, 0, 0);
+
+/**********
+HEADINGS
+**********/
+
+$active-letter-spacing: 0.1rem;
+
+/**********
+BACKGROUNDS
+**********/
+
+$backgrounds: (
+    bg1: url(../../public/img/bg1.jpg),
+    bg2: url(../../public/img/bg2.jpg),
+    bg3: url(../../public/img/bg3.jpg),
+    bg4: url(../../public/img/bg4.jpg),
+    bg5: url(../../public/img/bg5.jpg),
+    bg6: url(../../public/img/bg6.jpg),
+    bg7: url(../../public/img/bg7.jpg),
+    bg8: url(../../public/img/bg8.jpg),
+    bg9: url(../../public/img/bg9.jpg),
+    bg10: url(../../public/img/bg10.jpg),
+    bg11: url(../../public/img/bg11.jpg),
+    bg12: url(../../public/img/bg12.jpg),
+    bg13: url(../../public/img/bg13.jpg),
+    bg14: url(../../public/img/bg14.jpg),
+    bg15: url(../../public/img/bg15.jpg),
+    bg16: url(../../public/img/bg16.jpg),
+    bg17: url(../../public/img/bg17.jpg),
+    bg18: url(../../public/img/bg18.jpg),
+    bg19: url(../../public/img/bg19.jpg),
+    bg20: url(../../public/img/bg20.jpg),
+    bg21: url(../../public/img/bg21.jpg),
+    bg22: url(../../public/img/bg22.jpg),
+    bg23: url(../../public/img/bg23.jpg),
+    bg24: url(../../public/img/bg24.jpg),
+    bg25: url(../../public/img/bg25.jpg),
+);
+
+/**********
+SCROLLBAR
+**********/
+
+$scrollbar-width: 1rem;
+
+/**********
+SHADOW
+**********/
+
+$shadow-coeff: 0.5;
+
+/**********
+RESPONSIVE BREAKPOINTS
+**********/
+
+$breakpoints: (
+    extra-large: 1200px,
+    large: 992px,
+    medium: 768px,
+    small: 576px,
+);
+
+/**********
+RESPONSIVE SLIDESHOW
+**********/
+
+$slider-dimensions: 500px;
+$slider-dimensions-resp: 300px;

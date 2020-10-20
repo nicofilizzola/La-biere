@@ -1,0 +1,70 @@
+.members-section{    
+    &__card{
+        border: 1px solid $color-primary;
+    }
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
+        justify-content: flex-start;
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 2rem;
+        h2{
+            margin-top: 3.5rem;
+        }
+        &__card{
+            margin: 1rem;
+            width: 80vw;
+        } 
+    }
+}
+
+.subgrid{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+    max-width: 150px;
+    margin: 0 auto;
+    a{
+        width: 50px;
+    }
+    img{
+        width: 50px;
+        height: auto;
+        border-radius: none;
+        transition: 0.5s;
+        &:hover{
+            filter: brightness(50%);
+        }
+    }
+}
+
+#contact-form{
+    width: 500px;
+    input, textarea, button{
+        width: 100%;
+        padding: 1rem;
+        margin: 0.5rem;
+        border: none;
+        transition: 0.5s;
+    }
+    input, textarea{
+        &:focus{
+            background-color: darken($color: $color-secondary, $amount: 20);
+        }
+    }
+    textarea{
+        resize: none;
+        height: 180px;
+    }
+    button{
+        background-color: $color-primary-darken;
+        font-family: 'FuturaMid';
+        &:hover{
+            background-color: $color-primary;
+            @include pngShadow();
+            letter-spacing: $active-letter-spacing
+        }
+    }
+
+    @media screen and (max-width: map-get($map: $breakpoints, $key: medium)){
+        width: 300px;
+    }
+}

@@ -1,0 +1,16 @@
+.transition{
+    background-color: $color-primary;
+    @include fixedTop();
+    z-index: 100;
+    &--out{
+        transform:translateY(100%);
+    }
+}
+
+.transition--play{
+    animation: slideIn 0.75s ease-in-out forwards;
+}
+
+.transition--reverse{
+    animation: slideIn 0.75s ease-in-out reverse forwards;
+}

@@ -1,0 +1,18 @@
+#mentions_legales{
+    margin-top: 0;
+    padding: 4rem;
+    ol{
+        margin-bottom: 4rem;
+    }
+}
+
+table{
+    border: 1px $color-secondary;
+    margin-top: 1rem;
+    & * {
+        color: $color-secondary; 
+    }
+    tr, td{
+            border: 1px $color-secondary;
+    }
+} 
