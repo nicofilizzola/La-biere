@@ -37,7 +37,7 @@
 			</a>
 		</section>
 		
-		<section class="bg9" id="thirdSection">
+		<section class="bg18" id="thirdSection">
 			<figure class="hidden--medium flex">
 				<img src="public/img/aside7.png" alt="Contour d'une bouteille de bière fait avec des grains">
 			</figure>
