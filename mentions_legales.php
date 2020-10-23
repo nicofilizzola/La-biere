@@ -124,6 +124,10 @@
                         </tr>
                     </table>
 
+                    <form action="public/maquette_biere.zip" method="get" class="btn-download">
+                        <button type="submit">Téléchargez la maquette du site.</button>
+                    </form>
+
             </div>
 
             <?php

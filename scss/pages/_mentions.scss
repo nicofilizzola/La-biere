@@ -1,14 +1,22 @@
 #mentions_legales{
     margin-top: 0;
     padding: 4rem;
-    ol{
-        margin-bottom: 4rem;
+}
+
+
+.btn-download{
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    width: 300px;
+    &:hover{
+        background-color: darken($color: $color-secondary, $amount: 50);
+        color: $color-primary;
     }
 }
 
 table{
     border: 1px $color-secondary;
-    margin-top: 1rem;
+    margin: 2rem;
     & * {
         color: $color-secondary; 
     }
