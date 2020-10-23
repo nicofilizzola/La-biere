@@ -27,7 +27,7 @@
     }
     @media screen and (max-width: map-get($map: $breakpoints, $key: medium)) {
         width: 50px; 
-        bottom: 5rem;
+        bottom: 10rem;
         &--corner{
             width: 20px;
             bottom: 10rem;
